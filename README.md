@@ -113,4 +113,4 @@ FROM ecommerce;
 
 ## Funnel Visualization
 
-![Funnel Chart](funnel_chart.png)
+![Funnel Chart](./funnel_chart.png)
