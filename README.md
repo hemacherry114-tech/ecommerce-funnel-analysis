@@ -1,4 +1,4 @@
-# E-commerce Funnel & User Behavior Analysis (SQL)
+# User Activation & Retention Analysis (SQL)
 
 ## Objective
 To analyze user behavior across an e-commerce platform and identify drop-offs, conversion rates, and retention patterns using SQL.
@@ -84,3 +84,27 @@ Dataset used: Online Retail II (UCI)
 
 Source:
 https://www.kaggle.com/datasets/ulrikthygepedersen/online-retail-dataset
+
+
+---
+
+## Sample SQL Queries
+
+```sql
+-- Total Users
+SELECT COUNT(DISTINCT CustomerID) AS total_users
+FROM ecommerce;
+
+-- First Purchase Users
+SELECT COUNT(DISTINCT CustomerID)
+FROM ecommerce;
+
+-- Repeat Users
+SELECT CustomerID, COUNT(*) as orders
+FROM ecommerce
+GROUP BY CustomerID
+HAVING COUNT(*) > 1;
+
+-- Revenue Calculation
+SELECT SUM(Quantity * UnitPrice) AS total_revenue
+FROM ecommerce;
