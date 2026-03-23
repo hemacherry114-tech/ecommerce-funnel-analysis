@@ -108,3 +108,9 @@ HAVING COUNT(*) > 1;
 -- Revenue Calculation
 SELECT SUM(Quantity * UnitPrice) AS total_revenue
 FROM ecommerce;
+
+---
+
+## Funnel Visualization
+
+![Funnel Chart](funnel_chart.png)
